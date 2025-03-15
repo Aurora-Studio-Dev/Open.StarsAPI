@@ -10,7 +10,11 @@ if ! command -v python3 &> /dev/null; then
     if ! command -v python3 &> /dev/null; then
         echo "Python installation failed. Please install Python manually and run this script again."
         exit 1
+    else
+        echo "Python installed successfully."
     fi
+else
+    echo "Python is already installed."
 fi
 
 # 设置正确的包管理器 (pip)
