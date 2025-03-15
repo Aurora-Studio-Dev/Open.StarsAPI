@@ -1,4 +1,3 @@
-# weather.py
 from flask import Blueprint, request, jsonify
 from bs4 import BeautifulSoup
 from requests import get
