@@ -11,5 +11,7 @@ if [ $? -ne 0 ]; then
     python3 main.py
 fi
 
-# 暂停以便查看输出
-read -p "Press [Enter] key to continue..."
+# 可选：暂停以便查看输出，仅在前台执行时有效
+if [ -t 1 ]; then
+    read -p "Press [Enter] key to continue..."
+fi
