@@ -3,6 +3,7 @@ from weather import weather_bp
 from dailysentence import daily_sentence_bp
 from news import news_bp
 from flask_cors import CORS
+from flask_sslify import SSLify
 
 def display_banner():
     print("███████╗████████╗ █████╗ ██████╗ ███████╗ █████╗ ██████╗ ██╗")
@@ -17,6 +18,7 @@ def display_banner():
 
 app = Flask(__name__)
 CORS(app)
+sslify = SSLify(app)
 
 # 注册蓝图
 app.register_blueprint(weather_bp, url_prefix='/')
