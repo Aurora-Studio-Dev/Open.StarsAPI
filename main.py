@@ -2,6 +2,7 @@ from flask import Flask
 from weather import weather_bp
 from dailysentence import daily_sentence_bp
 from news import news_bp
+from flask_cors import CORS
 
 def display_banner():
     print("███████╗████████╗ █████╗ ██████╗ ███████╗ █████╗ ██████╗ ██╗")
@@ -15,6 +16,7 @@ def display_banner():
     print(" ")
 
 app = Flask(__name__)
+CORS(app)
 
 # 注册蓝图
 app.register_blueprint(weather_bp, url_prefix='/')
